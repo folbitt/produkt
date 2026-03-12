@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оперативная память</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .part-page {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            color: #4a90e2;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .model-container {
+            background: #2c3e50;
+            min-height: 500px;
+            border-radius: 12px;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: 400;
+        }
+        
+        .description {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .description h2 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-weight: 700;
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+        
+        .description p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        
+        .description ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        
+        .description li {
+            font-size: 18px;
+            margin-bottom: 12px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        
+        .description strong {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .example-box {
+            background: #e3f2fd;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+        
+        .example-box h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="part-page">
+        <a href="index.htm" class="back-link">← Назад к каталогу</a>
+        
+        <h1>Оперативная память (RAM)</h1>
+        
+      <model-viewer 
+    src="models/ram.glb" 
+    alt="3D модель оперативной памяти"
+    camera-controls
+    auto-rotate
+    style="width: 100%; height: 500px; background-color: #2c3e50; border-radius: 12px;">
+</model-viewer>
+        
+        <div class="description">
+            <h2>Что это такое</h2>
+            <p>Оперативная память (RAM — Random Access Memory) — это временное хранилище данных, с которыми компьютер работает прямо сейчас. Представь рабочий стол: на нём лежат документы, которые ты открыл. RAM — это и есть такой стол. Чем больше стол, тем больше документов можно разложить, не убирая в ящики.</p>
+            
+            <h2>Как работает</h2>
+            <p>Когда ты запускаешь программу или открываешь файл, данные копируются с медленного накопителя (SSD/HDD) в быструю оперативную память. Процессор работает только с данными из RAM, потому что обращаться напрямую к диску в тысячи раз медленнее.</p>
+            <p><strong>Откуда получает данные:</strong> С накопителя (SSD/HDD) при запуске программы или открытии файла. Процессор даёт команду: "загрузи игру в RAM, чтобы я мог быстро к ней обращаться".</p>
+            <p><strong>Куда отдаёт данные:</strong> Процессору. Когда процессору нужно что-то посчитать, он берёт данные из RAM, а результат кладёт обратно. Если результат нужно сохранить навсегда, процессор даёт команду записать его на диск.</p>
+            <p><strong>Чем питается:</strong> От материнской платы, через слоты памяти.</p>
+            
+            <h2>Важная особенность</h2>
+            <p><strong>Энергозависимость:</strong> Когда компьютер выключается, вся информация в RAM стирается. Поэтому всё, что не сохранено на диск, пропадает. Это не баг, а фича — так память всегда чистая для новых задач.</p>
+            
+            <h2>Характеристики RAM</h2>
+            <ul>
+                <li><strong>Объём (гигабайты):</strong> Сколько данных помещается. 8 ГБ — минимум для офиса, 16 ГБ — норма для игр, 32 ГБ и больше — для монтажа, 3D, виртуальных машин.</li>
+                <li><strong>Частота (МГц):</strong> Скорость обмена данными. Чем выше, тем быстрее, но разница в играх часто невелика (2-5%).</li>
+                <li><strong>Тайминги (задержки):</strong> Насколько быстро память отвечает на запросы. Меньше = лучше, но для обычного использования не критично.</li>
+                <li><strong>Двухканальный режим:</strong> Если поставить две одинаковые планки в правильные слоты, они будут работать вместе, увеличивая скорость на 10-30%.</li>
+            </ul>
+            
+            <h2>Типы RAM</h2>
+            <ul>
+                <li><strong>DDR4:</strong> Стандарт прошлых лет, до сих пор актуален. Частоты до 3600 МГц.</li>
+                <li><strong>DDR5:</strong> Новый стандарт, дороже, быстрее (до 6000+ МГц). Требует совместимых процессоров и материнских плат.</li>
+                <li><strong>DDR3:</strong> Устарело, только в очень старых компьютерах.</li>
+            </ul>
+            
+            <div class="example-box">
+                <h3>Пример в реальной жизни</h3>
+                <p><strong>32 ГБ DDR4 (4 планки по 8 ГБ) 2666 МГц</strong> — типичный набор для мощного домашнего ПК.</p>
+                <p><strong>В играх:</strong> Современные проекты занимают 12-16 ГБ. 32 ГБ позволяют держать открытыми браузер с десятком вкладок, Discord, стрим и саму игру — без намёка на тормоза.</p>
+                <p><strong>В монтаже:</strong> Adobe Premier или DaVinci Resolve при работе с 4K-видео могут съедать 20+ ГБ. С 32 ГБ таймлайн остаётся плавным, не приходится закрывать всё подряд.</p>
+                <p><strong>В 3D:</strong> Blender с тяжёлыми сценами любит много памяти. 32 ГБ — комфортный минимум для работы.</p>
+                <p><strong>Двухканальный режим:</strong> 4 планки работают в двухканале (парами), что даёт небольшой прирост производительности.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

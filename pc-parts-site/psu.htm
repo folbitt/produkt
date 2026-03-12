@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блок питания</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .part-page {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            color: #4a90e2;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .model-container {
+            background: #2c3e50;
+            min-height: 500px;
+            border-radius: 12px;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: 400;
+        }
+        
+        .description {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .description h2 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-weight: 700;
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+        
+        .description p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        
+        .description ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        
+        .description li {
+            font-size: 18px;
+            margin-bottom: 12px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        
+        .description strong {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .example-box {
+            background: #e3f2fd;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+        
+        .example-box h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="part-page">
+        <a href="index.htm" class="back-link">← Назад к каталогу</a>
+        
+        <h1>Блок питания (PSU)</h1>
+        
+      <model-viewer 
+    src="models/psu.glb" 
+    alt="3D модель блока питания"
+    camera-controls
+    auto-rotate
+    style="width: 100%; height: 500px; background-color: #2c3e50; border-radius: 12px;">
+</model-viewer>
+        
+        <div class="description">
+            <h2>Что это такое</h2>
+            <p>Блок питания (PSU — Power Supply Unit) — это устройство, которое обеспечивает электричеством все компоненты компьютера. Если компьютер — это организм, то блок питания — сердце, которое гоняет энергию по жилам.</p>
+            
+            <h2>Как работает</h2>
+            <p>Блок питания берёт переменный ток из розетки (220В в России) и преобразует его в постоянный, с разными напряжениями, которые нужны компонентам:</p>
+            <ul>
+                <li><strong>+12В:</strong> Для самых прожорливых потребителей — процессора и видеокарты.</li>
+                <li><strong>+5В и +3.3В:</strong> Для дисков, портов USB, чипсета материнской платы и другой мелочи.</li>
+            </ul>
+            <p>Также он выпрямляет и стабилизирует напряжение, чтобы перепады в сети не убили дорогие компоненты.</p>
+            
+            <h2>Куда идёт энергия</h2>
+            <p>От блока питания тянутся пучки проводов с разными разъёмами:</p>
+            <ul>
+                <li><strong>24-pin ATX:</strong> Главный разъём на материнской плате.</li>
+                <li><strong>4+4 pin EPS:</strong> Дополнительное питание процессора.</li>
+                <li><strong>6+2 pin PCIe:</strong> Питание видеокарты (иногда нужно два таких).</li>
+                <li><strong>SATA питание:</strong> Для дисков (SSD/HDD).</li>
+                <li><strong>Molex:</strong> Устаревший разъём для старых дисков и вентиляторов.</li>
+            </ul>
+            
+            <h2>Важные характеристики</h2>
+            <ul>
+                <li><strong>Мощность (Ватт):</strong> Сколько энергии может отдать. Для офисного ПК хватит 400-500 Вт, для игрового с мощной видеокартой нужно 650-850 Вт, топовые сборки берут 1000+ Вт.</li>
+                <li><strong>КПД (80 Plus):</strong> Насколько эффективно преобразует энергию. Бывает Bronze, Silver, Gold, Platinum, Titanium. Gold — золотая середина.</li>
+                <li><strong>Модульность:</strong> Можно ли отключать ненужные провода. Полностью модульные БП удобнее в сборке.</li>
+                <li><strong>Защиты:</strong> От перенапряжения, перегрузки, короткого замыкания. В нормальных БП это есть.</li>
+            </ul>
+            
+            <h2>Почему нельзя экономить на БП</h2>
+            <p>Дешёвые блоки питания могут:</p>
+            <ul>
+                <li>Не выдавать заявленную мощность</li>
+                <li>Иметь плохую стабилизацию напряжения</li>
+                <li>Греться и шуметь</li>
+                <li>В случае поломки сжечь материнскую плату, видеокарту и диски (бывает и такое)</li>
+            </ul>
+            
+            <div class="example-box">
+                <h3>Пример в реальной жизни</h3>
+                <p><strong>DeepCool 650W</strong> — качественный блок питания среднего сегмента.</p>
+                <p><strong>Мощность 650 Вт:</strong> Этого хватит для связки Ryzen 5 5600X (65 Вт) и RTX 5060 Ti (180 Вт) с запасом. Даже если добавить много дисков и вентиляторов, запас останется.</p>
+                <p><strong>Сертификат 80 Plus Bronze/Gold:</strong> В зависимости от модели — Bronze надёжно, Gold эффективнее (меньше греется и экономит электричество).</p>
+                <p><strong>Модульные кабели:</strong> Удобно — можно подключить только те провода, которые реально нужны, и не прятать лишние пучки в корпусе.</p>
+                <p><strong>Защиты:</strong> Есть всё необходимое, чтобы при скачке напряжения в сети компьютер не превратился в тыкву.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
