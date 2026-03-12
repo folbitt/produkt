@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Процессор</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .part-page {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            color: #4a90e2;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .model-container {
+            background: #2c3e50;
+            min-height: 500px;
+            border-radius: 12px;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: 400;
+        }
+        
+        .description {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .description h2 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-weight: 700;
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+        
+        .description p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        
+        .description ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        
+        .description li {
+            font-size: 18px;
+            margin-bottom: 12px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        
+        .description strong {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .example-box {
+            background: #e3f2fd;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+        
+        .example-box h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="part-page">
+        <a href="index.html" class="back-link">← Назад к каталогу</a>
+        
+        <h1>Процессор (CPU)</h1>
+        
+       <model-viewer 
+    src="models/cpu.glb" 
+    alt="3D модель процессора"
+    camera-controls
+    auto-rotate
+    style="width: 100%; height: 500px; background-color: #2c3e50; border-radius: 12px;">
+</model-viewer>
+        <div class="description">
+            <h2>Что это такое</h2>
+            <p>Процессор — это мозг компьютера. Он выполняет все вычисления, которые нужны для работы программ, игр и самой операционной системы. Если компьютер — это человек, то процессор — его мыслительный центр.</p>
+            
+            <h2>Как работает</h2>
+            <p>Процессор постоянно получает команды от программ, выполняет их и отдаёт результаты обратно. Этот цикл повторяется миллиарды раз в секунду.</p>
+            <p><strong>Откуда берёт данные:</strong> Из оперативной памяти (RAM). Когда ты запускаешь программу, она загружается в RAM, и процессор по очереди забирает оттуда команды на выполнение. Если данных в RAM нет, процессор идёт к накопителю (SSD/HDD), но это в тысячи раз медленнее.</p>
+            <p><strong>Куда отдаёт результат:</strong> Обратно в оперативную память. Также отправляет команды другим устройствам: видеокарте (нарисовать картинку), накопителю (сохранить файл), звуковой карте (воспроизвести звук).</p>
+            
+            <h2>Ядра и потоки — в чём разница?</h2>
+            <p><strong>Ядро</strong> — это физическая часть процессора. Представь заводской цех: ядро — это отдельный станок, который может выполнять работу. Чем больше станков (ядер), тем больше задач компьютер может делать одновременно.</p>
+            <p><strong>Поток</strong> — это набор команд, которые нужно выполнить. В аналогии с заводом: поток — это одна задача, которую станок обрабатывает.</p>
+            <p>Благодаря технологии Hyper-Threading (у Intel) или SMT (у AMD) одно физическое ядро может обрабатывать два потока одновременно, а не по очереди. Windows видит 6 физических ядер как 12 логических. Производительность вырастает на 30-40%.</p>
+            <p>Например, открыл браузер, игру и Discord — у тебя запущено минимум 50-100 потоков. Но физических ядер всего 6. Как так? Потоки просто быстро чередуются, создавая иллюзию одновременности.</p>
+            
+            <h2>От чего зависит скорость</h2>
+            <ul>
+                <li><strong>Тактовая частота:</strong> сколько операций в секунду. Измеряется в гигагерцах (ГГц). Чем выше, тем быстрее.</li>
+                <li><strong>Количество ядер:</strong> сколько задач одновременно. Для игр хватает 6, для монтажа и 3D нужно 8 и больше.</li>
+                <li><strong>Кэш-память:</strong> сверхбыстрая память прямо внутри процессора. Туда складываются самые нужные данные, чтобы каждый раз не лазить в RAM.</li>
+                <li><strong>Архитектура:</strong> как спроектирован процессор. Новые архитектуры делают больше работы за такт.</li>
+            </ul>
+            
+            <div class="example-box">
+                <h3>Пример в реальной жизни</h3>
+                <p><strong>AMD Ryzen 5 5600X</strong> — 6 ядер, 12 потоков, частота до 4.6 ГГц.</p>
+                <p>В игре: 6 ядер достаточно, чтобы тянуть любой современный проект. 12 потоков помогают, когда одновременно работают игра, Discord, браузер с гайдами и запись видео.</p>
+                <p>В монтаже: при рендере видео все 12 потоков загружаются на 100%, работая как единый механизм. Это в 2 раза быстрее, чем если бы было 6 потоков.</p>
+                <p>В офисе: даже не заметишь разницы с более дорогими процессорами — тексты и таблицы летают на любом.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

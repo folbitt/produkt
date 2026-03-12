@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f0f2f5;
+    color: #1a1a1a;
+    line-height: 1.5;
+}
+
+/* Заголовки — жирные */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* Обычный текст */
+p, li, a, span, div, .regular-text {
+    font-weight: 400;
+}
+
+/* Акценты и выделения */
+strong, b, .accent, .highlight {
+    font-weight: 600;
+}
+
+/* Мелкий текст, подписи */
+small, .caption, .footer-text {
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+/* Кнопки */
+button, .button {
+    font-weight: 500;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+    color: #1a1a1a;
+    line-height: 1.5;
+}
+
+header {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    border-bottom: 3px solid #4a90e2;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.about-site {
+    background: #e3f2fd;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.about-site p {
+    font-size: 18px;
+    color: #1a1a1a;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.parts-explained {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.part-description {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.part-description:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.part-description h3 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.part-description p {
+    font-size: 18px;
+    color: #555;
+}
+
+.catalog {
+    text-align: center;
+}
+
+.catalog p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.part-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+.part-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-color: #4a90e2;
+}
+
+.part-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.part-card h3 {
+    font-size: 18px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #1a1a1a;
+    color: white;
+    margin-top: 60px;
+}
