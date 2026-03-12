@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Видеокарта</title>
+    
+    <!-- Подключаем шрифт Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Подключаем model-viewer для 3D -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    
+    <!-- Подключаем общие стили -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .part-page {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            color: #4a90e2;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .description {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-top: 30px;
+        }
+        
+        .description h2 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-weight: 700;
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+        
+        .description p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        
+        .description ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        
+        .description li {
+            font-size: 18px;
+            margin-bottom: 12px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        
+        .description strong {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .example-box {
+            background: #e3f2fd;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+        
+        .example-box h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="part-page">
+        <a href="index.html" class="back-link">← Назад к каталогу</a>
+        
+        <h1>Видеокарта</h1>
+        
+        <!-- 3D МОДЕЛЬ -->
+        <model-viewer 
+            src="models/nvidia_geforce_rtx_3090.glb" 
+            alt="3D модель видеокарты"
+            camera-controls
+            auto-rotate
+            style="width: 100%; height: 500px; background-color: #2c3e50; border-radius: 12px;">
+        </model-viewer>
+        
+        <div class="description">
+            <h2>Что это такое</h2>
+            <p>Видеокарта — это устройство, которое отвечает за вывод изображения на монитор. В играх и 3D-программах на неё ложится основная нагрузка. Если процессор — это мозг, то видеокарта — это глаза и руки художника.</p>
+            
+            <h2>Как работает</h2>
+            <p>Видеокарта получает от процессора данные о том, что должно быть на экране, и превращает их в картинку. Процессор говорит: "нарисуй домик с тенями и текстурой дерева", а видеокарта считает, как должны падать лучи света, какой цвет у каждой точки экрана, и отправляет готовое изображение на монитор.</p>
+            <p><strong>Откуда получает данные:</strong> От процессора через шину PCI Express. Также может брать текстуры и модели прямо с накопителя, но обычно они сначала загружаются в оперативную память.</p>
+            <p><strong>Куда отдаёт результат:</strong> На монитор через HDMI или DisplayPort. Внутри себя видеокарта хранит временные данные в своей собственной памяти — видеопамяти (VRAM).</p>
+            <p><strong>Чем питается:</strong> От блока питания напрямую. Мощные карты могут потреблять 300+ Вт и требуют отдельные кабели питания (обычно 6+2 pin).</p>
+            
+            <h2>Из чего состоит видеокарта</h2>
+            <ul>
+                <li><strong>Графический процессор (GPU):</strong> главный чип, который всё считает. У него тысячи маленьких ядер, специализирующихся на параллельных вычислениях.</li>
+                <li><strong>Видеопамять (VRAM):</strong> своя оперативная память, куда складываются текстуры, модели и промежуточные кадры. Чем больше, тем лучше для высоких разрешений.</li>
+                <li><strong>Система охлаждения:</strong> радиаторы и вентиляторы, отводящие тепло. Современные карты греются до 70-80°C под нагрузкой.</li>
+                <li><strong>Печатная плата:</strong> на ней расположены все компоненты и разъёмы питания.</li>
+            </ul>
+            
+            <h2>Зачем нужна мощная видеокарта</h2>
+            <ul>
+                <li><strong>Игры:</strong> чтобы играть в современные проекты на высоких настройках с нормальным FPS.</li>
+                <li><strong>Видеомонтаж:</strong> ускорение рендера, плавное воспроизведение таймлайна в 4K.</li>
+                <li><strong>3D-моделирование:</strong> просчёт сложных сцен, работа с миллионами полигонов.</li>
+                <li><strong>Научные расчёты:</strong> GPU отлично справляются с параллельными вычислениями.</li>
+            </ul>
+            
+            <div class="example-box">
+                <h3>Пример в реальной жизни</h3>
+                <p><strong>NVIDIA RTX 5060 Ti 16GB</strong> — современная видеокарта среднего-высокого уровня.</p>
+                <p><strong>В играх:</strong> В Cyberpunk 2077 на 2K-разрешении с ультра-настройками и трассировкой лучей выдаёт стабильные 60+ FPS благодаря технологии DLSS. В CS2 или Dota 2 — 200+ FPS, хоть на 360 Гц мониторе играй.</p>
+                <p><strong>16 ГБ видеопамяти:</strong> Это запас на годы. Современные игры в 4K могут съедать 12-14 ГБ, и с 16 ГБ ты не упрёшься в потолок.</p>
+                <p><strong>В монтаже:</strong> В DaVinci Resolve карта ускоряет просчёт эффектов в реальном времени. Можно работать с 4K-видео без превью-тормозов.</p>
+                <p><strong>В 3D:</strong> Рендер в Blender с использованием GPU в 5-10 раз быстрее, чем если бы считал только процессор.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
